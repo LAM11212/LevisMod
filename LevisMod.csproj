@@ -8,7 +8,9 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Weapons\ProgressiveKnife.png" />
 	  <None Remove="Content\Items\Weapons\TestSword.png" />
+	  <None Remove="Content\Projectiles\ProgressiveKnifeProjectile.png" />
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
 	</ItemGroup>
 

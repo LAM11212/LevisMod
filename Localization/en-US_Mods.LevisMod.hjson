@@ -3,6 +3,11 @@ Items: {
 		DisplayName: Test Sword
 		Tooltip: ""
 	}
+
+	ProgressiveKnife: {
+		DisplayName: Progressive Knife
+		Tooltip: ""
+	}
 }
 
 Projectiles.TestSwordProjectile.DisplayName: Test Sword Projectile

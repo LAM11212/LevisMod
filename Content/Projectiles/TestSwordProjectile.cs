@@ -14,8 +14,8 @@ namespace LevisMod.Content.Projectiles
     {
         public override void SetDefaults()
         {
-            Projectile.width = 32;
-            Projectile.height = 32;
+            Projectile.width = 40;
+            Projectile.height = 40;
             Projectile.aiStyle = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
