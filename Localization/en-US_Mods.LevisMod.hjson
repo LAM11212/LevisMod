@@ -1,0 +1,8 @@
+Items: {
+	TestSword: {
+		DisplayName: Test Sword
+		Tooltip: ""
+	}
+}
+
+Projectiles.TestSwordProjectile.DisplayName: Test Sword Projectile
