@@ -10,4 +10,9 @@ Items: {
 	}
 }
 
-Projectiles.TestSwordProjectile.DisplayName: Test Sword Projectile
+Projectiles: {
+	TestSwordProjectile.DisplayName: Test Sword Projectile
+	ProgressiveKnifeProjectile.DisplayName: Progressive Knife Projectile
+}
+
+NPCS.Asuka.DisplayName: Asuka
