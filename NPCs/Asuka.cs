@@ -65,7 +65,7 @@ namespace LevisMod.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = "Shop";
-            //add a button2 eventually that only becomes available after a certain time (check skeletron spawn for code)
+            //add a button2 eventually that only becomes available after a certain time (check gun-shop for code)
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
@@ -98,6 +98,52 @@ namespace LevisMod.NPCs
                     }
                 }
             }
+        }
+
+        public override string GetChat()
+        {
+            NPC.FindFirstNPC(ModContent.NPCType<Asuka>());
+            switch (Main.rand.Next(4))
+            {
+                case 0:
+                    return "BAKA SHINJI";
+                case 1:
+                    return "Misato likes to act all high and mighty as if Im not way stronger and prettier too..";
+                case 2:
+                    return "ughhh this place is so boring, say you wanna get outta here with me?";
+                case 3:
+                    return "Eva-02 kicks ass, and so does it's pilot.";
+                default:
+                    return "what do you want?";
+            }
+        }
+
+        public override void TownNPCAttackStrength(ref int damage, ref float knockback)
+        {
+            damage = 30;
+            knockback = 5f;
+        }
+
+        public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)
+        {
+            cooldown = 8;
+            randExtraCooldown = 10;
+        }
+
+        public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
+        {
+            projType = ProjectileID.WoodenArrowFriendly;
+            attackDelay = 1;
+        }
+
+        public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
+        {
+            multiplier = 7f;
+        }
+
+        public override void OnKill()
+        {
+            Item.NewItem(NPC.GetSource_Death(), NPC.getRect(), ItemID.CloudinaBottle);
         }
     }
 }
