@@ -25,7 +25,7 @@ namespace LevisMod.NPCs
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCHit1;
             NPC.knockBackResist = 0.5f;
-            Main.npcFrameCount[NPC.type] = 25; // check with aseprite frames after creating
+            Main.npcFrameCount[NPC.type] = 24;
             NPCID.Sets.ExtraFramesCount[NPC.type] = 0;
             NPCID.Sets.AttackFrameCount[NPC.type] = 1;
             NPCID.Sets.DangerDetectRange[NPC.type] = 600;
@@ -36,7 +36,7 @@ namespace LevisMod.NPCs
             AnimationType = 22;
         }
 
-        public override bool CanTownNPCSpawn(int numTownNPCs)
+        public override bool CanTownNPCSpawn(int numTownNPCs) // spawn condition.
         {
             for(var i = 0; i < 255; i++)
             {
@@ -65,14 +65,28 @@ namespace LevisMod.NPCs
         public override void SetChatButtons(ref string button, ref string button2)
         {
             button = "Shop";
-            //add a button2 eventually that only becomes available after a certain time (check gun-shop for code)
+            button2 = "Talk";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref string shopName)
         {
+            int x = Main.rand.Next(4);
             if (firstButton)
             {
                 shopName = "Asukas Shop";
+            } 
+            else if(!firstButton && x == 0)
+            {
+                Main.npcChatText = "I don't want to die. I don't want to die. I don't want to die. I don't want to die. ";
+            } else if(!firstButton && x == 1)
+            {
+                Main.npcChatText = "*you hear a faint humming tune* \"fly me to the moon, and let me play among the stars, let me see what spring is like on jupiter and ma- HEY WHAT ARE YOU DOING?\"";
+            } else if(!firstButton && x == 2)
+            {
+                Main.npcChatText = "shall I get you a stool?";
+            } else if(!firstButton && x == 3)
+            {
+                Main.npcChatText = "I hope theres more to my life than this.";
             }
         }
 
@@ -80,23 +94,18 @@ namespace LevisMod.NPCs
         {
             if(shopName == "Asukas Shop")
             {
-                List<int> customItems = new()
+                int nextSlot = 0;
+                items[nextSlot] = new Item(ModContent.ItemType<ProgressiveKnife>())
                 {
-                    ModContent.ItemType<ProgressiveKnife>(),
-                    ItemID.WoodenArrow,
-                    ItemID.HealingPotion,
-                    ItemID.ManaPotion
+                    shopCustomPrice = 1000
                 };
+                nextSlot++;
 
-                int slot = 0;
-                foreach(int itemType in customItems)
-                {
-                    if(slot < items.Length)
-                    {
-                        items[slot] = new Item(itemType);
-                        slot++;
-                    }
-                }
+                items[nextSlot] = new Item(ItemID.IronPickaxe);
+                nextSlot++;
+
+                items[nextSlot] = new Item(ItemID.Jetpack);
+                nextSlot++;
             }
         }
 

@@ -12,6 +12,7 @@
 	  <None Remove="Content\Items\Weapons\TestSword.png" />
 	  <None Remove="Content\Projectiles\ProgressiveKnifeProjectile.png" />
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
+	  <None Remove="NPCs\Asuka.png" />
 	</ItemGroup>
 
 	<!-- References -->
