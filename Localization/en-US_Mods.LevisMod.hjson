@@ -8,11 +8,24 @@ Items: {
 		DisplayName: Progressive Knife
 		Tooltip: ""
 	}
+
+	Magicwand: {
+		DisplayName: Magicwand
+		Tooltip: ""
+	}
+
+	Positron: {
+		DisplayName: Positron
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
 	TestSwordProjectile.DisplayName: Test Sword Projectile
 	ProgressiveKnifeProjectile.DisplayName: Progressive Knife Projectile
+	MageSnowProjectile.DisplayName: Mage Snow Projectile
+	EnergyBeam.DisplayName: Energy Beam
+	EnergyBullet.DisplayName: Energy Bullet
 }
 
 NPCS.Asuka.DisplayName: Asuka

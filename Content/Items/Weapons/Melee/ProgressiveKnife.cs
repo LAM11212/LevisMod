@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace LevisMod.Content.Items.Weapons
+namespace LevisMod.Content.Items.Weapons.Melee
 {
     internal class ProgressiveKnife : ModItem
     {

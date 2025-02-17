@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using LevisMod.Content.Projectiles;
 
-namespace LevisMod.Content.Items.Weapons
+namespace LevisMod.Content.Items.Weapons.Melee
 {
     internal class TestSword : ModItem
     {
