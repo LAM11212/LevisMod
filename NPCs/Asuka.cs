@@ -17,23 +17,23 @@ namespace LevisMod.NPCs
         {
             NPC.townNPC = true;
             NPC.friendly = true;
-            NPC.width = 20;
-            NPC.height = 20;
+            NPC.width = 40;
+            NPC.height = 56;
             NPC.aiStyle = 7;
             NPC.defense = 40;
             NPC.lifeMax = 300;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCHit1;
             NPC.knockBackResist = 0.5f;
-            Main.npcFrameCount[NPC.type] = 24;
+            Main.npcFrameCount[NPC.type] = 21; // match with aseprite frames
             NPCID.Sets.ExtraFramesCount[NPC.type] = 0;
             NPCID.Sets.AttackFrameCount[NPC.type] = 1;
             NPCID.Sets.DangerDetectRange[NPC.type] = 600;
-            NPCID.Sets.AttackType[NPC.type] = 1;
+            NPCID.Sets.AttackType[NPC.type] = 2;
             NPCID.Sets.AttackTime[NPC.type] = 30;
             NPCID.Sets.AttackAverageChance[NPC.type] = 10;
             NPCID.Sets.HatOffsetY[NPC.type] = 4;
-            AnimationType = 22;
+            AnimationType = NPCID.Dryad;
         }
 
         public override bool CanTownNPCSpawn(int numTownNPCs) // spawn condition.

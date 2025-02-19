@@ -18,6 +18,26 @@ Items: {
 		DisplayName: Positron
 		Tooltip: ""
 	}
+
+	PalletAmmo: {
+		DisplayName: Pallet Ammo
+		Tooltip: ""
+	}
+
+	PalletRifle: {
+		DisplayName: Pallet Rifle
+		Tooltip: ""
+	}
+
+	DiamondAmmo: {
+		DisplayName: Diamond Ammo
+		Tooltip: ""
+	}
+
+	DiamondPickaxeGun: {
+		DisplayName: Diamond Pickaxe Gun
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -26,6 +46,8 @@ Projectiles: {
 	MageSnowProjectile.DisplayName: Mage Snow Projectile
 	EnergyBeam.DisplayName: Energy Beam
 	EnergyBullet.DisplayName: Energy Bullet
+	PalletAmmoProjectile.DisplayName: Pallet Ammo Projectile
+	DiamondAmmoProjectile.DisplayName: Diamond Ammo Projectile
 }
 
 NPCS.Asuka.DisplayName: Asuka
