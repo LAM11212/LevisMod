@@ -17,8 +17,8 @@ namespace LevisMod.NPCs
         {
             NPC.townNPC = true;
             NPC.friendly = true;
-            NPC.width = 40;
-            NPC.height = 56;
+            NPC.width = 20;
+            NPC.height = 20;
             NPC.aiStyle = 7;
             NPC.defense = 40;
             NPC.lifeMax = 300;
@@ -90,23 +90,11 @@ namespace LevisMod.NPCs
             }
         }
 
-        public override void ModifyActiveShop(string shopName, Item[] items)
+        public override void AddShops()
         {
-            if(shopName == "Asukas Shop")
-            {
-                int nextSlot = 0;
-                items[nextSlot] = new Item(ModContent.ItemType<ProgressiveKnife>())
-                {
-                    shopCustomPrice = 1000
-                };
-                nextSlot++;
-
-                items[nextSlot] = new Item(ItemID.IronPickaxe);
-                nextSlot++;
-
-                items[nextSlot] = new Item(ItemID.Jetpack);
-                nextSlot++;
-            }
+            NPCShop shop = new(Type);
+            shop.Add(ModContent.ItemType<ProgressiveKnife>());
+            shop.Add(ItemID.Jetpack);
         }
 
         public override string GetChat()
