@@ -38,6 +38,11 @@ Items: {
 		DisplayName: Diamond Pickaxe Gun
 		Tooltip: ""
 	}
+
+	RiftBlade: {
+		DisplayName: Rift Blade
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -55,6 +60,21 @@ NPCS.Asuka.DisplayName: Asuka
 NPCs: {
 	Asuka: {
 		DisplayName: Asuka
+
+		TownNPCMood: {
+			Content: I am content.
+			NoHome: I hate not having a home.
+			FarFromHome: I am too far from home.
+			LoveSpace: I love having so much space.
+			DislikeCrowded: I dislike how crowded I am.
+			HateCrowded: I hate how crowded I am.
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
+
+	Misato: {
+		DisplayName: Misato
 
 		TownNPCMood: {
 			Content: I am content.

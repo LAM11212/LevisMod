@@ -23,6 +23,7 @@
 	  <None Remove="Content\Projectiles\ProgressiveKnifeProjectile.png" />
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
 	  <None Remove="NPCs\Asuka.png" />
+	  <None Remove="NPCs\Misato.png" />
 	</ItemGroup>
 
 	<!-- References -->
