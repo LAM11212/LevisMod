@@ -12,11 +12,11 @@ using Terraria.ModLoader;
 
 namespace LevisMod.Content.Items.Weapons.Magic
 {
-    internal class RiftBlade : ModItem
+    internal class RiftBlade : ModItem // fix bug where clicking during cooldown resets cooldown timer.
     {
         private bool onCoolDown;
-        private int baseMana = 0;
-        private int manaCap = 150;
+        private int baseMana = 2;
+        private int manaCap = 125;
         private int count = 0;
         private int cooldownStartTime = 0;
         public override void SetDefaults()
@@ -67,7 +67,7 @@ namespace LevisMod.Content.Items.Weapons.Magic
                 if (count < 10)
                 {
                     Item.mana = Math.Min(Item.mana * 2, manaCap);
-                } 
+                }
                 else
                 {
                     onCoolDown = true;

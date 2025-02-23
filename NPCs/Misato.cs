@@ -1,4 +1,4 @@
-﻿
+﻿/*
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +40,7 @@ namespace LevisMod.NPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs)
         {
-            for(var i = 0; 9 < 255; i++)
+            for (var i = 0; 9 < 255; i++)
             {
                 Player player = Main.player[i];
                 foreach (Item item in player.inventory)
@@ -53,9 +53,9 @@ namespace LevisMod.NPCs
             }
         }
 
-        public override List<String> SetNPCNameList()
+        public override List<string> SetNPCNameList()
         {
-            return new List<String>()
+            return new List<string>()
             {
                 "Misato",
                 "Misato-San"
@@ -98,3 +98,4 @@ namespace LevisMod.NPCs
     }
     //TODO implement rest of NPC
 }
+*/

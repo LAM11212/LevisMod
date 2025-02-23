@@ -38,10 +38,10 @@ namespace LevisMod.NPCs
 
         public override bool CanTownNPCSpawn(int numTownNPCs) // spawn condition.
         {
-            for(var i = 0; i < 255; i++)
+            for (var i = 0; i < 255; i++)
             {
                 Player player = Main.player[i];
-                foreach(Item item in player.inventory)
+                foreach (Item item in player.inventory)
                 {
                     if (item.type == ItemID.WoodenArrow)
                     {
@@ -52,9 +52,9 @@ namespace LevisMod.NPCs
             return false;
         }
 
-        public override List<String> SetNPCNameList()
+        public override List<string> SetNPCNameList()
         {
-            return new List<String>()
+            return new List<string>()
             {
                 "Asuka",
                 "Asuka-Langley",
@@ -74,17 +74,20 @@ namespace LevisMod.NPCs
             if (firstButton)
             {
                 shopName = "Asukas Shop";
-            } 
-            else if(!firstButton && x == 0)
+            }
+            else if (!firstButton && x == 0)
             {
                 Main.npcChatText = "I don't want to die. I don't want to die. I don't want to die. I don't want to die. ";
-            } else if(!firstButton && x == 1)
+            }
+            else if (!firstButton && x == 1)
             {
                 Main.npcChatText = "*you hear a faint humming tune* \"fly me to the moon, and let me play among the stars, let me see what spring is like on jupiter and ma- HEY WHAT ARE YOU DOING?\"";
-            } else if(!firstButton && x == 2)
+            }
+            else if (!firstButton && x == 2)
             {
                 Main.npcChatText = "shall I get you a stool?";
-            } else if(!firstButton && x == 3)
+            }
+            else if (!firstButton && x == 3)
             {
                 Main.npcChatText = "I hope theres more to my life than this.";
             }

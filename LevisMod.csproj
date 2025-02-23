@@ -12,6 +12,7 @@
 	  <None Remove="Content\Items\Ammo\PalletAmmo.png" />
 	  <None Remove="Content\Items\Weapons\Magic\magicwand.png" />
 	  <None Remove="Content\Items\Weapons\Magic\Positron.png" />
+	  <None Remove="Content\Items\Weapons\Magic\RiftBlade.png" />
 	  <None Remove="Content\Items\Weapons\ProgressiveKnife.png" />
 	  <None Remove="Content\Items\Weapons\Ranged\DiamondPickaxeGun.png" />
 	  <None Remove="Content\Items\Weapons\Ranged\PalletRifle.png" />
