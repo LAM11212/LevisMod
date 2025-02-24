@@ -10,6 +10,8 @@
 	<ItemGroup>
 	  <None Remove="Content\Items\Ammo\DiamondAmmo.png" />
 	  <None Remove="Content\Items\Ammo\PalletAmmo.png" />
+	  <None Remove="Content\Items\Materials\MechanicalComponent.png" />
+	  <None Remove="Content\Items\Ores\MechanicalScraps.png" />
 	  <None Remove="Content\Items\Weapons\Magic\magicwand.png" />
 	  <None Remove="Content\Items\Weapons\Magic\Positron.png" />
 	  <None Remove="Content\Items\Weapons\Magic\RiftBlade.png" />

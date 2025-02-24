@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace LevisMod.NPCs
+namespace LevisMod.NPCs.TownNPCs
 {
     public class Asuka : ModNPC
     {
