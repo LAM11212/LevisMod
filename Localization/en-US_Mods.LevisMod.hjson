@@ -53,6 +53,11 @@ Items: {
 		DisplayName: Mechanical Scraps
 		Tooltip: ""
 	}
+
+	InvulnerabilityAccessory: {
+	DisplayName: AT_Field
+	Tooltip: Grants 3 seconds of invulnerability when hit.
+	}
 }
 
 Projectiles: {
