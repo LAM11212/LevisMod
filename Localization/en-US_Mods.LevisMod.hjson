@@ -55,8 +55,18 @@ Items: {
 	}
 
 	InvulnerabilityAccessory: {
-	DisplayName: AT_Field
-	Tooltip: Grants 3 seconds of invulnerability when hit.
+		DisplayName: AT_Field
+		Tooltip: Grants 3 seconds of invulnerability when hit.
+	}
+
+	AT_Field: {
+		DisplayName: A T_ Field
+		Tooltip: ""
+	}
+
+	TheVoid: {
+		DisplayName: The Void
+		Tooltip: ""
 	}
 }
 

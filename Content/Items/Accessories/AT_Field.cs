@@ -17,7 +17,6 @@ namespace LevisMod.Content.Items.Accessories
 
     public class AT_Field : ModItem
     {
-        public bool isInvulnerable = false;
 
         public override void SetDefaults()
         {
@@ -30,14 +29,20 @@ namespace LevisMod.Content.Items.Accessories
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.GetModPlayer<InvulnerabilityPlayer>().isInvulnerable = true;
+            player.GetModPlayer<InvulnerabilityPlayer>().hasATFieldEquipped = true;
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             tooltips.Add(new TooltipLine(Mod, "InvulnerabilityEffect", "Grants 3 seconds of invulnerability when hit."));
         }
-    }
 
-    
+        public override void AddRecipes()
+        {
+            Recipe recipe = CreateRecipe();
+            recipe.AddIngredient(ItemID.Gel, 12);
+            recipe.AddTile(TileID.Anvils);
+            recipe.Register();
+        }
+    }   
 }
