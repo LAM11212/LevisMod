@@ -8,6 +8,7 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Content\Items\Accessories\ATglow.png" />
 	  <None Remove="Content\Items\Accessories\AT_Field.png" />
 	  <None Remove="Content\Items\Ammo\DiamondAmmo.png" />
 	  <None Remove="Content\Items\Ammo\PalletAmmo.png" />

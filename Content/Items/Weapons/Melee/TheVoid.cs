@@ -38,7 +38,7 @@ namespace LevisMod.Content.Items.Weapons.Melee
             target.AddBuff(BuffID.Bleeding, 1000);
         }
 
-        public override void AddRecipes()
+        public override void AddRecipes() // i might make this a permanant item idk yet.
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.TerraBlade, 5);
