@@ -44,7 +44,7 @@ namespace LevisMod.Content.Items.Armor.EVA_01_Armor
         public override void UpdateEquip(Player player)
         {
             player.GetDamage<RangedDamageClass>() += 0.1f;
-            player.GetCritChance<RangedDamageClass>() += 0.05f;
+            player.GetCritChance<RangedDamageClass>() += 5f;
         }
 
         public override void AddRecipes()
