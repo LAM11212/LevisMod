@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using System.Transactions;
 using LevisMod.Content.Items.Materials;
-
+// to fix the armor you need to create a sprite sheet titled Eva_01_Helmet_Head.png, Eva_01_Breastplate_Body, Eva_01_Leggings_Legs, and make them sprite sheets of the walking animation, check calamity for more details.
 namespace LevisMod.Content.Items.Armor.EVA_01_Armor
 {
     [AutoloadEquip(EquipType.Head)]
