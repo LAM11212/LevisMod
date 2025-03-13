@@ -14,7 +14,9 @@
 	  <None Remove="Content\Items\Ammo\PalletAmmo.png" />
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Breastplate.png" />
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Helmet.png" />
+	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Helmet_Head.png" />
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Leggings.png" />
+	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Leggings_Legs.png" />
 	  <None Remove="Content\Items\Materials\MechanicalComponent.png" />
 	  <None Remove="Content\Items\Ores\MechanicalScraps.png" />
 	  <None Remove="Content\Items\Weapons\Magic\magicwand.png" />

@@ -68,6 +68,21 @@ Items: {
 		DisplayName: The Void
 		Tooltip: ""
 	}
+
+	Eva_01_Breastplate: {
+		DisplayName: Eva_01_ Breastplate
+		Tooltip: ""
+	}
+
+	Eva_01_Helmet: {
+		DisplayName: Eva_01_ Helmet
+		Tooltip: ""
+	}
+
+	Eva_01_Leggings: {
+		DisplayName: Eva_01_ Leggings
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
