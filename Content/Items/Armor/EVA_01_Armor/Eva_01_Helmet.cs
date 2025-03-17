@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using System.Transactions;
 using LevisMod.Content.Items.Materials;
-// to fix the armor you need to create a sprite sheet titled Eva_01_Helmet_Head.png, Eva_01_Breastplate_Body, Eva_01_Leggings_Legs, and make them sprite sheets of the walking animation, check calamity for more details.
+
 namespace LevisMod.Content.Items.Armor.EVA_01_Armor
 {
     [AutoloadEquip(EquipType.Head)]
@@ -22,24 +22,21 @@ namespace LevisMod.Content.Items.Armor.EVA_01_Armor
             Item.value = Item.buyPrice(gold: 10000);
             Item.defense = 15;
         }
-
-        /*
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            //return body.type == ModContent.ItemType<enter breastplate here>() && legs.type == ModContent.ItemType<enter leggings here>();
+            return body.type == ModContent.ItemType<Eva_01_Breastplate>() && legs.type == ModContent.ItemType<Eva_01_Leggings>();
         }
-        */
+   
 
         public override void ArmorSetShadows(Player player)
         {
             player.armorEffectDrawShadow = true;
         }
-        /* this method will be used to set an armor buff when the player has the entire set, must make the entire set first, your own localized value for the set.
         public override void UpdateArmorSet(Player player)
         {
-            
+            player.setBonus = "Enemies take damage when they attack you.";
+            player.thorns = 1f;
         }
-        */
 
         public override void UpdateEquip(Player player)
         {
