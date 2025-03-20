@@ -19,12 +19,12 @@ namespace LevisMod.Content.Items.Weapons.Melee
             Item.height = 64;
 
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.useTime = 5;
-            Item.useAnimation = 5;
+            Item.useTime = 25;
+            Item.useAnimation = 25;
             Item.autoReuse = true;
 
             Item.DamageType = DamageClass.Melee;
-            Item.damage = 400;
+            Item.damage = 50;
             Item.crit = 75;
 
             Item.value = Item.buyPrice(platinum: 10, gold: 700);
@@ -34,7 +34,10 @@ namespace LevisMod.Content.Items.Weapons.Melee
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(ModContent.BuffType<BleedDebuff>(), 300);
+            if (target.TryGetGlobalNPC<NPCs.BleedGlobalNPC>(out var bleedNPC))
+            {
+                bleedNPC.applyBleed(target, 300);
+            }
         }
 
         public override void AddRecipes()

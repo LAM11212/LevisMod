@@ -83,6 +83,11 @@ Items: {
 		DisplayName: Eva_01_ Leggings
 		Tooltip: ""
 	}
+
+	BlackCleaver: {
+		DisplayName: Black Cleaver
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -143,3 +148,5 @@ NPCs: {
 		}
 	}
 }
+
+"Keybinds.Noxian Guillotine.DisplayName": Noxian  Guillotine
