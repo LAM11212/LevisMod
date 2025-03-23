@@ -22,7 +22,6 @@ namespace LevisMod.Players
                 AttemptExecuteGuillotine();
             }
         }
-
         private void AttemptExecuteGuillotine()
         {
             foreach(NPC npc in Main.npc)
