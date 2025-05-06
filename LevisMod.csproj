@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<!-- Import tModLoader mod properties -->
 	<Import Project="..\tModLoader.targets" />
@@ -29,12 +29,16 @@
 	  <None Remove="Content\Items\Weapons\TestSword.png" />
 	  <None Remove="Content\Projectiles\DiamondAmmoProjectile.png" />
 	  <None Remove="Content\Projectiles\EnergyBullet.png" />
+	  <None Remove="Content\Projectiles\Fizz.png" />
 	  <None Remove="Content\Projectiles\MageSnowProjectile.png" />
 	  <None Remove="Content\Projectiles\PalletAmmoProjectile.png" />
 	  <None Remove="Content\Projectiles\ProgressiveKnifeProjectile.png" />
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
 	  <None Remove="NPCs\Asuka.png" />
 	  <None Remove="NPCs\Misato.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="NPCs\Pets\" />
 	</ItemGroup>
 
 	<!-- References -->
