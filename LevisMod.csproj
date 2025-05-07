@@ -29,15 +29,22 @@
 	  <None Remove="Content\Items\Weapons\TestSword.png" />
 	  <None Remove="Content\Projectiles\DiamondAmmoProjectile.png" />
 	  <None Remove="Content\Projectiles\EnergyBullet.png" />
-	  <None Remove="Content\Projectiles\Fizz.png" />
+	  <None Remove="Content\Projectiles\FizzBuff.png" />
+	  <None Remove="Content\Projectiles\Gravity - Copy.png" />
+	  <None Remove="Content\Projectiles\Gravity.png" />
 	  <None Remove="Content\Projectiles\MageSnowProjectile.png" />
 	  <None Remove="Content\Projectiles\PalletAmmoProjectile.png" />
 	  <None Remove="Content\Projectiles\ProgressiveKnifeProjectile.png" />
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
+	  <None Remove="Images\NPC_633.png" />
+	  <None Remove="Images\NPC_633_Alt.png" />
 	  <None Remove="NPCs\Asuka.png" />
 	  <None Remove="NPCs\Misato.png" />
+	  <None Remove="NPCs\TownNPCs\Zoologist.png" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Content\Items\Weapons\Summon\" />
+	  <Folder Include="Images\" />
 	  <Folder Include="NPCs\Pets\" />
 	</ItemGroup>
 

@@ -25,7 +25,7 @@ namespace LevisMod.Content.Items.Weapons.Melee
             Item.autoReuse = true;
 
             Item.DamageType = DamageClass.Melee;
-            Item.damage = 10000;
+            Item.damage = 100000;
             Item.crit = 65;
 
             Item.value = Item.buyPrice(gold: 100000, silver: 50);

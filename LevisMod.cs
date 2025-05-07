@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.ID;
 
 namespace LevisMod
 {
@@ -29,5 +31,6 @@ namespace LevisMod
             Instance = null;
             BleedPlayer.GuillotineKey = null;
         }
+
     }
 }
