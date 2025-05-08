@@ -15,6 +15,7 @@ namespace LevisMod.Content.Projectiles
 {
     public class Gravity : ModProjectile
     {
+        private int frameTimer;
         public override void SetDefaults()
         {
             Projectile.height = 10;
@@ -27,11 +28,23 @@ namespace LevisMod.Content.Projectiles
             Projectile.timeLeft = 1000;
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
+            Main.projFrames[Projectile.type] = 12;
 
         }
 
         public override void AI()
         {
+            frameTimer++;
+            if (frameTimer >= 13)
+            {
+                frameTimer = 0;
+                Projectile.frame++;
+                if (Projectile.frame >= Main.projFrames[Projectile.type])
+                {
+                    Projectile.frame = 0;
+                }
+            }
+
             if (Main.rand.NextBool(5))
             {
                 int choice = Main.rand.Next(3);
