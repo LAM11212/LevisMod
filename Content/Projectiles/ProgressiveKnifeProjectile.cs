@@ -23,15 +23,8 @@ namespace LevisMod.Content.Projectiles
             Projectile.tileCollide = false;
             Projectile.ownerHitCheck = true;
             Projectile.hide = true;
-        }
+            AIType = ProjectileID.MagicDagger;
 
-        public override void AI()
-        {
-            Player player = Main.player[Projectile.owner];
-            Vector2 ownerCenter = player.RotatedRelativePoint(player.MountedCenter, true);
-            Projectile.position = ownerCenter - new Vector2(Projectile.width / 2, Projectile.height / 2);
-            Projectile.rotation = Projectile.velocity.ToRotation();
-            player.SetCompositeArmFront(true, Player.CompositeArmStretchAmount.Full, Projectile.rotation - MathHelper.PiOver2);
         }
     }
 }
