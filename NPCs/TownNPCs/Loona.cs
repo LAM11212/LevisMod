@@ -114,7 +114,7 @@ namespace LevisMod.NPCs.TownNPCs
 
         public override string GetChat()
         {
-            NPC.FindFirstNPC(ModContent.NPCType<Zoologist>());
+            NPC.FindFirstNPC(NPCID.PartyGirl);
             switch (Main.rand.Next(4))
             {
                 case 0:

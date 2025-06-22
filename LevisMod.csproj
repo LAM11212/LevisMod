@@ -16,8 +16,11 @@
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Helmet.png" />
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Leggings.png" />
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Leggings_Legs.png" />
+	  <None Remove="Content\Items\Buffs\SuperSpeedBuff.png" />
 	  <None Remove="Content\Items\Materials\MechanicalComponent.png" />
+	  <None Remove="Content\Items\Misc\PortableHome.png" />
 	  <None Remove="Content\Items\Ores\MechanicalScraps.png" />
+	  <None Remove="Content\Items\Potions\SuperSpeedPotion.png" />
 	  <None Remove="Content\Items\Weapons\Magic\magicwand.png" />
 	  <None Remove="Content\Items\Weapons\Magic\Positron.png" />
 	  <None Remove="Content\Items\Weapons\Magic\RiftBlade.png" />
@@ -38,13 +41,13 @@
 	  <None Remove="Content\Projectiles\TestSwordProjectile.png" />
 	  <None Remove="Images\NPC_633.png" />
 	  <None Remove="Images\NPC_633_Alt.png" />
+	  <None Remove="Images\testTexture.png" />
 	  <None Remove="NPCs\Asuka.png" />
 	  <None Remove="NPCs\Misato.png" />
-	  <None Remove="NPCs\TownNPCs\Zoologist.png" />
+	  <None Remove="NPCs\TownNPCs\Loona.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Content\Items\Weapons\Summon\" />
-	  <Folder Include="Images\" />
 	  <Folder Include="NPCs\Pets\" />
 	</ItemGroup>
 

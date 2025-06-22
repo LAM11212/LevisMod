@@ -15,9 +15,12 @@ namespace LevisMod
 	public class LevisMod : Mod
 	{
 		public static LevisMod Instance;
+        public Texture2D fastTravelIcon;
 
         public override void Load()
         {
+
+            fastTravelIcon = ModContent.Request<Texture2D>("LevisMod/Images/testTexture").Value;
             Instance = this;
 
             if(!Main.dedServ)
@@ -28,6 +31,7 @@ namespace LevisMod
 
         public override void Unload()
         {
+            fastTravelIcon = null;
             Instance = null;
             BleedPlayer.GuillotineKey = null;
         }
