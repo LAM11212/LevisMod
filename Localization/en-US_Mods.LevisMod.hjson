@@ -103,6 +103,11 @@ Items: {
 		DisplayName: Super Speed Potion
 		Tooltip: ""
 	}
+
+	Cigarette: {
+		DisplayName: Cigarette
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -261,5 +266,10 @@ Buffs: {
 	SuperSpeedBuff: {
 		DisplayName: Super Speed Buff
 		Description: Mods.LevisMod.Buffs.SuperSpeedBuff.Description
+	}
+
+	CigaretteBuff: {
+		DisplayName: Cigarette Buff
+		Description: Mods.LevisMod.Buffs.CigaretteBuff.Description
 	}
 }

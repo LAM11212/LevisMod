@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace LevisMod.Content.Items.Buffs
 {
-    public class SuperSpeedBuff : ModBuff
+    public class CigaretteBuff : ModBuff
     {
 
         public override void SetStaticDefaults()
@@ -19,7 +19,9 @@ namespace LevisMod.Content.Items.Buffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.moveSpeed += 100;
+            player.moveSpeed += 5;
+            player.gravity += 0.5f;
+            player.jumpSpeedBoost += 10.5f;
         }
     }
 }
