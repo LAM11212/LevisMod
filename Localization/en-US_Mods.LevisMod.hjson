@@ -108,6 +108,11 @@ Items: {
 		DisplayName: Cigarette
 		Tooltip: ""
 	}
+
+	UselessPotion: {
+		DisplayName: Useless Potion
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
