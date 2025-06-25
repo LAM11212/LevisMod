@@ -28,7 +28,7 @@ namespace LevisMod.Content.Items.Potions
 
         public override bool ConsumeItem(Player player)
         {
-            for(int i = 0; i < 50; i++)
+            for(int i = 0; i < 20; i++)
             {
                 Dust.NewDust(player.position, player.width, player.height, DustID.Smoke, Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-2f, 2f));
             }
