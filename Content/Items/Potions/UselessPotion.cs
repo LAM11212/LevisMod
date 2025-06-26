@@ -35,5 +35,11 @@ namespace LevisMod.Content.Items.Potions
             CombatText.NewText(player.Hitbox, Microsoft.Xna.Framework.Color.Purple, "Wheeee!");
             return true;
         }
+
+        public override void AddRecipes()
+        {
+            Recipe uselessPotionRecipe = CreateRecipe();
+            uselessPotionRecipe.AddIngredient(ItemID.DirtBlock, 25);
+        }
     }
 }

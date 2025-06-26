@@ -18,6 +18,7 @@
 	  <None Remove="Content\Items\Armor\EVA_01_Armor\Eva_01_Leggings_Legs.png" />
 	  <None Remove="Content\Items\Buffs\CigaretteBuff.png" />
 	  <None Remove="Content\Items\Materials\MechanicalComponent.png" />
+	  <None Remove="Content\Items\Materials\Tobacco.png" />
 	  <None Remove="Content\Items\Misc\PortableHome.png" />
 	  <None Remove="Content\Items\Ores\MechanicalScraps.png" />
 	  <None Remove="Content\Items\Potions\Cigarette.png" />

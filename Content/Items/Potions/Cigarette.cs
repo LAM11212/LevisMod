@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LevisMod.Content.Items.Buffs;
+using LevisMod.Content.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -40,6 +41,8 @@ namespace LevisMod.Content.Items.Potions
             Recipe cigRecipe = CreateRecipe();
             cigRecipe.AddIngredient(ItemID.AshBlock, 10);
             cigRecipe.AddIngredient(ItemID.Fireblossom, 5);
+            cigRecipe.AddIngredient(ModContent.ItemType<Tobacco>(), 5);
+            cigRecipe.Register();
         }
     }
 }
