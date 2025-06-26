@@ -34,5 +34,12 @@ namespace LevisMod.Content.Items.Potions
             }
             return true;
         }
+
+        public override void AddRecipes()
+        {
+            Recipe cigRecipe = CreateRecipe();
+            cigRecipe.AddIngredient(ItemID.AshBlock, 10);
+            cigRecipe.AddIngredient(ItemID.Fireblossom, 5);
+        }
     }
 }
