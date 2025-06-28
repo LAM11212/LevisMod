@@ -93,11 +93,6 @@ namespace LevisMod.NPCs.TownNPCs
             }
         }
 
-        public override void ModifyActiveShop(string shopName, Item[] items)
-        {
-            
-        }
-
         public override void AddShops()
         {
             NPCShop shop = new(Type);
