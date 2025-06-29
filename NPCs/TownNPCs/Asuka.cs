@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LevisMod.Content.Items.Weapons.Melee;
+using LevisMod.Players;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -64,7 +65,7 @@ namespace LevisMod.NPCs.TownNPCs
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            button = "Shop";
+            button = "Gift";
             button2 = "Talk";
         }
 
@@ -73,23 +74,40 @@ namespace LevisMod.NPCs.TownNPCs
             int x = Main.rand.Next(4);
             if (firstButton)
             {
-                shopName = "Asukas Shop";
+                if (Main.player[Main.myPlayer].HeldItem.type == ItemID.Diamond ||
+                    Main.player[Main.myPlayer].HeldItem.type == ItemID.GingerbreadCookie ||
+                    Main.player[Main.myPlayer].HeldItem.type == ItemID.Banana)
+                {
+                    HandleLovedGift();
+                    var rel = Main.LocalPlayer.GetModPlayer<RelationshipPlayer>();
+                    int npcType = this.NPC.type;
+                    rel.npcHearts[npcType] = rel.npcHearts.GetValueOrDefault(npcType, 0) + 2;
+                    Main.NewText("She loved it!");
+                }
+                else
+                {
+                    HandleLovedGift();
+                    var rel = Main.LocalPlayer.GetModPlayer<RelationshipPlayer>();
+                    int npcType = this.NPC.type;
+                    rel.npcHearts[npcType] = rel.npcHearts.GetValueOrDefault(npcType, 0) + 1;
+                    Main.NewText("Shes seen better.");
+                }
             }
-            else if (!firstButton && x == 0)
+            else if (!firstButton)
             {
-                Main.npcChatText = "I don't want to die. I don't want to die. I don't want to die. I don't want to die. ";
+                Main.npcChatText = GetChat();
             }
-            else if (!firstButton && x == 1)
+            
+        }
+
+        public static void HandleLovedGift()
+        {
+            Player player = Main.LocalPlayer;
+            Item heldItem = player.HeldItem;
+
+            if(heldItem != null && !heldItem.IsAir && heldItem.stack > 0)
             {
-                Main.npcChatText = "*you hear a faint humming tune* \"fly me to the moon, and let me play among the stars, let me see what spring is like on jupiter and ma- HEY WHAT ARE YOU DOING?\"";
-            }
-            else if (!firstButton && x == 2)
-            {
-                Main.npcChatText = "shall I get you a stool?";
-            }
-            else if (!firstButton && x == 3)
-            {
-                Main.npcChatText = "I hope theres more to my life than this.";
+                heldItem.stack--;
             }
         }
 
@@ -103,19 +121,63 @@ namespace LevisMod.NPCs.TownNPCs
         public override string GetChat()
         {
             NPC.FindFirstNPC(ModContent.NPCType<Asuka>());
-            switch (Main.rand.Next(4))
+            int randChat = Main.rand.Next(4);
+            var player = Main.LocalPlayer;
+            var rel = player.GetModPlayer<RelationshipPlayer>();
+            double hearts = rel.npcHearts.GetValueOrDefault(NPC.type, 0);
+            if(hearts < 4)
             {
-                case 0:
-                    return "BAKA SHINJI";
-                case 1:
-                    return "Misato likes to act all high and mighty as if Im not way stronger and prettier too..";
-                case 2:
-                    return "ughhh this place is so boring, say you wanna get outta here with me?";
-                case 3:
-                    return "Eva-02 kicks ass, and so does it's pilot.";
-                default:
-                    return "what do you want?";
+                switch (randChat)
+                {
+                    case 0:
+                        return "BAKA SHINJI";
+                    case 1:
+                        return "Misato likes to act all high and mighty as if Im not way stronger and prettier too..";
+                    case 2:
+                        return "ughhh this place is so boring, say you wanna get outta here with me?";
+                    case 3:
+                        return "Eva-02 kicks ass, and so does it's pilot.";
+                    default:
+                        return "what do you want?";
+                }
             }
+            else if(hearts >= 4 && hearts < 8)
+            {
+                switch (randChat)
+                {
+                    case 0:
+                        return "y'know, you're not so bad..";
+                    case 1:
+                        return "I feel like I've met you before";
+                    case 2:
+                        return "ughhh everyone around here is so boring, except for you..";
+                    case 3:
+                        return "I just know Im going to make it some day";
+                    default:
+                        return "I wonder what the world will look like after we're gone..";
+                }
+            }
+            else if (hearts >= 8)
+            {
+                switch (randChat)
+                {
+                    case 0:
+                        return "hey, you want to hang out later?";
+                    case 1:
+                        return "another day in paradise...";
+                    case 2:
+                        return "I really miss having someone to talk to.. maybe you could listen?";
+                    case 3:
+                        return "I wonder what my mom would say if she could see me now.";
+                    default:
+                        return "*she sings gently*";
+                }
+            }
+            else
+            {
+                return "baka...";
+            }
+            
         }
 
         public override void TownNPCAttackStrength(ref int damage, ref float knockback)

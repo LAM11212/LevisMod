@@ -20,6 +20,7 @@
 	  <None Remove="Content\Items\Materials\MechanicalComponent.png" />
 	  <None Remove="Content\Items\Materials\Tobacco.png" />
 	  <None Remove="Content\Items\Misc\PortableHome.png" />
+	  <None Remove="Content\Items\Misc\SkullOfPain.png" />
 	  <None Remove="Content\Items\Ores\MechanicalScraps.png" />
 	  <None Remove="Content\Items\Potions\Cigarette.png" />
 	  <None Remove="Content\Items\Potions\UselessPotion.png" />
