@@ -8,11 +8,11 @@ using Terraria.ModLoader.IO;
 
 namespace LevisMod.Players
 {
-    public class RelationshipPlayer : ModPlayer
+    public class RelationshipSystem : ModSystem
     {
-        public Dictionary<int, int> npcHearts = new();
+        public static Dictionary<int, int> npcHearts = new();
 
-        public override void SaveData(TagCompound tag)
+        public override void SaveWorldData(TagCompound tag)
         {
             var list = new List<TagCompound>();
 
@@ -27,7 +27,7 @@ namespace LevisMod.Players
                 tag["npcHearts"] = list;
         }
 
-        public override void LoadData(TagCompound tag)
+        public override void LoadWorldData(TagCompound tag)
         {
             npcHearts = new Dictionary<int, int>();
 

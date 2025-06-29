@@ -123,6 +123,11 @@ Items: {
 		DisplayName: Skull Of Pain
 		Tooltip: ""
 	}
+
+	AngelsWings: {
+		DisplayName: Angels Wings
+		Tooltip: ""
+	}
 }
 
 Projectiles: {

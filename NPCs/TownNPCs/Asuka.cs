@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LevisMod.Content.Items.Potions;
 using LevisMod.Content.Items.Weapons.Melee;
 using LevisMod.Players;
 using Microsoft.Xna.Framework;
@@ -58,8 +59,8 @@ namespace LevisMod.NPCs.TownNPCs
             return new List<string>()
             {
                 "Asuka",
-                "Asuka-Langley",
-                "Asuka-Langley_soryu"
+                "Asuka Langley",
+                "Asuka Langley Soryu"
             };
         }
 
@@ -76,20 +77,19 @@ namespace LevisMod.NPCs.TownNPCs
             {
                 if (Main.player[Main.myPlayer].HeldItem.type == ItemID.Diamond ||
                     Main.player[Main.myPlayer].HeldItem.type == ItemID.GingerbreadCookie ||
-                    Main.player[Main.myPlayer].HeldItem.type == ItemID.Banana)
+                    Main.player[Main.myPlayer].HeldItem.type == ItemID.Banana ||
+                    Main.player[Main.myPlayer].HeldItem.type == ModContent.ItemType<Cigarette>())
                 {
                     HandleLovedGift();
-                    var rel = Main.LocalPlayer.GetModPlayer<RelationshipPlayer>();
                     int npcType = this.NPC.type;
-                    rel.npcHearts[npcType] = rel.npcHearts.GetValueOrDefault(npcType, 0) + 2;
+                    RelationshipSystem.npcHearts[npcType] = RelationshipSystem.npcHearts.GetValueOrDefault(npcType, 0) + 2;
                     Main.NewText("She loved it!");
                 }
                 else
                 {
                     HandleLovedGift();
-                    var rel = Main.LocalPlayer.GetModPlayer<RelationshipPlayer>();
                     int npcType = this.NPC.type;
-                    rel.npcHearts[npcType] = rel.npcHearts.GetValueOrDefault(npcType, 0) + 1;
+                    RelationshipSystem.npcHearts[npcType] = RelationshipSystem.npcHearts.GetValueOrDefault(npcType, 0) + 1;
                     Main.NewText("Shes seen better.");
                 }
             }
@@ -123,8 +123,8 @@ namespace LevisMod.NPCs.TownNPCs
             NPC.FindFirstNPC(ModContent.NPCType<Asuka>());
             int randChat = Main.rand.Next(4);
             var player = Main.LocalPlayer;
-            var rel = player.GetModPlayer<RelationshipPlayer>();
-            double hearts = rel.npcHearts.GetValueOrDefault(NPC.type, 0);
+            int npctype = this.NPC.type;
+            int hearts = RelationshipSystem.npcHearts.GetValueOrDefault(npctype, 0);
             if(hearts < 4)
             {
                 switch (randChat)
